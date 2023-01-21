@@ -1,0 +1,16 @@
+# ninja log v5
+18	201	6956856958410916	CMakeFiles/VAC_C.dir/day4/day4.c.obj	f85603713daacf31
+25	220	6956856958450943	CMakeFiles/VAC_C.dir/day3/student_details.c.obj	3e8a2cd912f801b7
+50	275	6956856959198336	CMakeFiles/VAC_C.dir/day6/arrays.c.obj	ddd9fef2220f3435
+2	233	6956856958682934	CMakeFiles/VAC_C.dir/day3/day3.c.obj	1e1ba9a86199ee6d
+42	257	6956856959026728	CMakeFiles/VAC_C.dir/day7/search.c.obj	c26ba3f85aba68d
+92	307	6956856959623110	CMakeFiles/VAC_C.dir/recruitment_tracking/task_3.c.obj	31dfa1dda3740f24
+33	247	6956856958814703	CMakeFiles/VAC_C.dir/day4/task2-operators.c.obj	645b148e914f9d89
+72	270	6956856959198336	CMakeFiles/VAC_C.dir/recruitment_tracking/task_1.c.obj	5672c7e8303fce4e
+10	246	6956856958556833	CMakeFiles/VAC_C.dir/day4/task1-datatypes.c.obj	c1b0fd65cdf88d09
+61	280	6956856959294059	CMakeFiles/VAC_C.dir/day5/day_5.c.obj	f15bfdfc13f8a624
+100	286	6956856959379848	CMakeFiles/VAC_C.dir/day7/sort.c.obj	1caeb9acac4727e0
+84	301	6956856959572771	CMakeFiles/VAC_C.dir/recruitment_tracking/task_2.c.obj	2156288be0a4630c
+220	350	6956856960074307	CMakeFiles/VAC_C.dir/recruitment_tracking/task_5.c.obj	7546930c03e9b618
+203	357	6956856960133144	CMakeFiles/VAC_C.dir/recruitment_tracking/task_6.c.obj	2986b508ebb6e24f
+234	365	6956856960219852	CMakeFiles/VAC_C.dir/recruitment_tracking/task_4.c.obj	7b7009bfdf4458a9
