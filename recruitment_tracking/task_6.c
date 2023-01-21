@@ -1,10 +1,16 @@
-/*VAC - C - Mini Project
+/*
+
+VAC - C - Mini Project - RECRUITMENT TRACKING
+
 Task 6: Write a program to implement arrays to store the details
 of several candidate score. Find the largest and the least
 score among all.
-Compiled by: Ashvath S.P
+
+Created by: Ashvath S.P
+
 Date:21-11-2022
- */
+
+*/
 
 #include <stdio.h>
 

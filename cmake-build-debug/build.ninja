@@ -133,6 +133,12 @@ build CMakeFiles/VAC_C.dir/recruitment_tracking/task_6.c.obj: C_COMPILER__VAC_C_
   OBJECT_DIR = CMakeFiles\VAC_C.dir
   OBJECT_FILE_DIR = CMakeFiles\VAC_C.dir\recruitment_tracking
 
+build CMakeFiles/VAC_C.dir/recruitment_tracking/task_7.c.obj: C_COMPILER__VAC_C_Debug C$:/Users/ashva/Work/christ/2nd$ year/VAC-C/recruitment_tracking/task_7.c || cmake_object_order_depends_target_VAC_C
+  DEP_FILE = CMakeFiles\VAC_C.dir\recruitment_tracking\task_7.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\VAC_C.dir
+  OBJECT_FILE_DIR = CMakeFiles\VAC_C.dir\recruitment_tracking
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target VAC_C
@@ -141,7 +147,7 @@ build CMakeFiles/VAC_C.dir/recruitment_tracking/task_6.c.obj: C_COMPILER__VAC_C_
 #############################################
 # Link the executable VAC_C.exe
 
-build VAC_C.exe: C_EXECUTABLE_LINKER__VAC_C_Debug CMakeFiles/VAC_C.dir/day3/day3.c.obj CMakeFiles/VAC_C.dir/day4/day4.c.obj CMakeFiles/VAC_C.dir/day4/task1-datatypes.c.obj CMakeFiles/VAC_C.dir/day4/task2-operators.c.obj CMakeFiles/VAC_C.dir/day5/day_5.c.obj CMakeFiles/VAC_C.dir/day6/arrays.c.obj CMakeFiles/VAC_C.dir/day7/search.c.obj CMakeFiles/VAC_C.dir/day7/sort.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_1.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_2.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_3.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_4.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_5.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_6.c.obj
+build VAC_C.exe: C_EXECUTABLE_LINKER__VAC_C_Debug CMakeFiles/VAC_C.dir/day3/day3.c.obj CMakeFiles/VAC_C.dir/day4/day4.c.obj CMakeFiles/VAC_C.dir/day4/task1-datatypes.c.obj CMakeFiles/VAC_C.dir/day4/task2-operators.c.obj CMakeFiles/VAC_C.dir/day5/day_5.c.obj CMakeFiles/VAC_C.dir/day6/arrays.c.obj CMakeFiles/VAC_C.dir/day7/search.c.obj CMakeFiles/VAC_C.dir/day7/sort.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_1.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_2.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_3.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_4.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_5.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_6.c.obj CMakeFiles/VAC_C.dir/recruitment_tracking/task_7.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\VAC_C.dir
