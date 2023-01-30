@@ -14,36 +14,39 @@ Date: 27-11-2022
 
 #include <stdio.h>
 
+const int maxCandidates = 10;
+
 void displayCompanyDetails() {
     printf("Company Details\n");
-    printf("XYZ Ltd.\n");
+    printf("Tata Ltd.\n");
 }
 
-void getCandidateDetails(char *name, int *age, char *gender, char *post, char *degree) {
+void
+getCandidateDetails(char name[][50], int age[], char gender[], char post[][50], char degree[][50], int candidateNum) {
     printf("Enter Name: ");
-    scanf("%s", name);
+    scanf("%s", name[candidateNum]);
     printf("Enter Age: ");
-    scanf("%d", age);
+    scanf("%d", &age[candidateNum]);
     printf("Enter Gender(M/F): ");
-    scanf(" %c", gender);
+    scanf(" %c", &gender[candidateNum]);
     printf("Enter Post Applied: ");
-    scanf("%s", post);
+    scanf("%s", post[candidateNum]);
     printf("Enter Degree: ");
-    scanf("%s", degree);
+    scanf("%s", degree[candidateNum]);
 }
 
-void displayCandidateDetails(char *name, int age, char gender, char *post, char *degree) {
+void displayCandidateDetails(char name[][50], int age[], char gender[], char post[][50], char degree[][50],
+                             int candidateNum) {
     printf("\n\nCandidate Details\n");
-    printf("Name: %s\n", name);
-    printf("Age: %d\n", age);
-    printf("Gender: %c\n", gender);
-    printf("Post Applied: %s\n", post);
-    printf("Degree: %s\n", degree);
+    printf("Name: %s\n", name[candidateNum]);
+    printf("Age: %d\n", age[candidateNum]);
+    printf("Gender: %c\n", gender[candidateNum]);
+    printf("Post Applied: %s\n", post[candidateNum]);
+    printf("Degree: %s\n", degree[candidateNum]);
 }
 
 float calculateBonus(float marks) {
     float cgpa = marks / 10;
-
     if (cgpa >= 9.0) {
         return 10;
     } else if (cgpa >= 8.0) {
@@ -53,23 +56,18 @@ float calculateBonus(float marks) {
     }
 }
 
-void displayScoreDetails(float marks, float bonus) {
+void displayScoreDetails(float marks[], float bonus[], int candidateNum) {
     printf("\n\nScore Details\n");
-    printf("Marks: %.2f\n", marks);
-    printf("CGPA: %.2f\n", marks / 10);
-    printf("Bonus: %.2f\n", bonus);
-    printf("Total Score: %.2f\n", marks + bonus);
+    printf("Marks: %.2f\n", marks[candidateNum]);
+    printf("CGPA: %.2f\n", marks[candidateNum] / 10);
+    printf("Bonus: %.2f\n", bonus[candidateNum]);
+    printf("Total Score: %.2f\n", marks[candidateNum] + bonus[candidateNum]);
 }
 
 int main() {
-    char name[50];
-    int age;
-    char gender;
-    char post[50];
-    char degree[50];
-    float marks, bonus;
-    int option;
-
+    char name[maxCandidates][50], gender[maxCandidates], post[maxCandidates][50], degree[maxCandidates][50];
+    int age[maxCandidates], option, candidateNum = 0;
+    float marks[maxCandidates], bonus[maxCandidates];
     do {
         printf("Enter 1 for Company details\n");
         printf("Enter 2 for Candidate details\n");
@@ -77,32 +75,33 @@ int main() {
         printf("Enter 4 to Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &option);
-
         switch (option) {
             case 1:
                 displayCompanyDetails();
                 break;
-
             case 2:
-                getCandidateDetails(name, &age, &gender, post, degree);
-                displayCandidateDetails(name, age, gender, post, degree);
+                if (candidateNum < maxCandidates) {
+                    getCandidateDetails(name, age, gender, post, degree, candidateNum);
+                    displayCandidateDetails(name, age, gender, post, degree, candidateNum);
+                    candidateNum++;
+                }
                 break;
-
             case 3:
-                printf("Enter Marks: ");
-                scanf("%f", &marks);
-                bonus = calculateBonus(marks);
-                displayScoreDetails(marks, bonus);
+                if (candidateNum > 0) {
+                    printf("Enter Marks: ");
+                    scanf("%f", &marks[candidateNum - 1]);
+                    bonus[candidateNum - 1] = calculateBonus(marks[candidateNum - 1]);
+                    displayScoreDetails(marks, bonus, candidateNum - 1);
+                } else {
+                    printf("Enter Candidate Details first\n");
+                }
                 break;
-
             case 4:
                 break;
-
             default:
                 printf("Invalid option. Please enter a valid option\n");
                 break;
         }
     } while (option != 4);
-
     return 0;
 }
