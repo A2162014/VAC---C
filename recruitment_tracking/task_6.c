@@ -40,7 +40,7 @@ int main() {
 
                 printf("\tName: ");
                 scanf(" %s", companyName);
-                printf("\tClass: \n\t1. Public\n\t2. Private\n");
+                printf("\t\tClass: \n\t1. Public\n\t2. Private\n");
                 printf("\tChoose class: ");
                 scanf(" %hu", &companyClass);
                 printf("\tLocation: ");

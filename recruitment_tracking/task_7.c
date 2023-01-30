@@ -50,7 +50,7 @@ int main() {
         printf("\nThe product of the two matrices is: \n");
         for (i = 0; i < r1; i++) {
             for (j = 0; j < c2; j++) {
-                printf("%d", c[i][j]);
+                printf(" %d ", c[i][j]);
             }
             printf("\n");
         }
