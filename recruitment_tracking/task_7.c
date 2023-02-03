@@ -6,7 +6,7 @@ Task 7: Write a program to implement matrix multiplication
 
 Created by: Ashvath S.P
 
-Date:21-11-2022
+Date:21-01-2023
 
 */
 

@@ -2,19 +2,17 @@
 
 VAC - C - Mini Project - RECRUITMENT TRACKING
 
-Task 8: Write a program to implement user defined functions to
-implement the following functionality 1. Company details
-2. Candidate details 3. Score calculation
+Task 10: Write a program to find the average scores of several rounds using functions and pointers.
 
 Created by: Ashvath S.P
 
-Date: 27-01-2023
+Date: 03-02-2023
 
 */
 
 #include <stdio.h>
 
-const int maxCandidates = 10;
+int maxCandidates = 10;
 
 void displayCompanyDetails() {
     printf("Company Details\n");
@@ -22,7 +20,7 @@ void displayCompanyDetails() {
 }
 
 void
-getCandidateDetails(char name[][50], int age[], char gender[], char post[][50], char degree[][50], int candidateNum) {
+getCandidateDetails(char (*name)[50], int *age, char *gender, char (*post)[50], char (*degree)[50], int candidateNum) {
     printf("Enter Name: ");
     scanf("%s", name[candidateNum]);
     printf("Enter Age: ");
@@ -35,7 +33,8 @@ getCandidateDetails(char name[][50], int age[], char gender[], char post[][50], 
     scanf("%s", degree[candidateNum]);
 }
 
-void displayCandidateDetails(char name[][50], int age[], char gender[], char post[][50], char degree[][50],
+
+void displayCandidateDetails(char (*name)[50], int *age, char *gender, char (*post)[50], char (*degree)[50],
                              int candidateNum) {
     printf("\n\nCandidate Details\n");
     printf("Name: %s\n", name[candidateNum]);
@@ -44,6 +43,7 @@ void displayCandidateDetails(char name[][50], int age[], char gender[], char pos
     printf("Post Applied: %s\n", post[candidateNum]);
     printf("Degree: %s\n", degree[candidateNum]);
 }
+
 
 float calculateBonus(float marks) {
     float cgpa = marks / 10;
@@ -56,7 +56,7 @@ float calculateBonus(float marks) {
     }
 }
 
-void displayScoreDetails(float marks[], float bonus[], int candidateNum) {
+void displayScoreDetails(float *marks, float *bonus, int candidateNum) {
     printf("\n\nScore Details\n");
     printf("Marks: %.2f\n", marks[candidateNum]);
     printf("CGPA: %.2f\n", marks[candidateNum] / 10);
@@ -64,10 +64,13 @@ void displayScoreDetails(float marks[], float bonus[], int candidateNum) {
     printf("Total Score: %.2f\n", marks[candidateNum] + bonus[candidateNum]);
 }
 
+
 int main() {
-    char name[maxCandidates][50], gender[maxCandidates], post[maxCandidates][50], degree[maxCandidates][50];
+    char name[maxCandidates][50], gender[maxCandidates];
+    char post[maxCandidates][50], degree[maxCandidates][50];
     int age[maxCandidates], option, candidateNum = 0;
     float marks[maxCandidates], bonus[maxCandidates];
+
     do {
         printf("Enter 1 for Company details\n");
         printf("Enter 2 for Candidate details\n");

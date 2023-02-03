@@ -17,4 +17,4 @@ add_executable(VAC_C
         recruitment_tracking/task_3.c
         recruitment_tracking/task_4.c
         recruitment_tracking/task_5.c
-        recruitment_tracking/task_6.c recruitment_tracking/task_7.c recruitment_tracking/task_8.c recruitment_tracking/task_9.c)
+        recruitment_tracking/task_6.c recruitment_tracking/task_7.c recruitment_tracking/task_8.c recruitment_tracking/task_9.c recruitment_tracking/task_10.c)
