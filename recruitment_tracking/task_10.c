@@ -72,6 +72,13 @@ int main() {
     float marks[maxCandidates], bonus[maxCandidates];
 
     do {
+        candidateNum++;
+    }
+    break;
+    case 3:
+        if (candidateNum > 0) {
+            printf("Enter Marks: ");
+            scanf("%f", &marks[candidateNum - 1]);
         printf("Enter 1 for Company details\n");
         printf("Enter 2 for Candidate details\n");
         printf("Enter 3 for Score details\n");
@@ -86,13 +93,6 @@ int main() {
                 if (candidateNum < maxCandidates) {
                     getCandidateDetails(name, age, gender, post, degree, candidateNum);
                     displayCandidateDetails(name, age, gender, post, degree, candidateNum);
-                    candidateNum++;
-                }
-                break;
-            case 3:
-                if (candidateNum > 0) {
-                    printf("Enter Marks: ");
-                    scanf("%f", &marks[candidateNum - 1]);
                     bonus[candidateNum - 1] = calculateBonus(marks[candidateNum - 1]);
                     displayScoreDetails(marks, bonus, candidateNum - 1);
                 } else {
